@@ -15,7 +15,7 @@ function clicked(e){
     
 //Next, let's get the text out of the text input that our user can type into:
 let input = document.getElementById("new-item").value;
-//So, we're getting the element by the ID attached to it, then selecting only the "value" property.
+//So, we're getting the element by the ID attached to it, then selecting -only- the "value" property, which is the text our user entered.
 //
     let list = document.getElementById("note-list");
 //
