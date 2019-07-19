@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="center">
+    <!-- Let's build a list-making app. Users can add items! -->
+    <h1>Make-A-List</h1>
+    <h4>The modern way to get it done &reg;</h4>
+    <!-- We make a form element to hold the text input and button for submitting the form. -->
+    <form>
+        <input type="text" id="new-item">
+        <!-- Next, we add a button. Normally, when you submit a form it refreshes the page. We don't want that, so we'll pass the "event" into our function...don't worry we'll talk about that function more in main.js!-->
+        <button type="submit" onclick="clicked(event)">Add Item</button>
+    </form>
+    <!-- The ul below is what will house all of our tasks/groceries/list as users add them-->
+    <ul id="note-list"></ul>
+    <!-- The script tag with a src of main.js below is what contains all of the logic for our text box and button -->
+    <script src="main.js"></script>
+    <!-- By commenting out main.js and uncommenting alternate.js, we can see a slightly different version of the application with additional features. -->
+    <!-- <script src="alternate.js"></script> -->
+</body>
+</html>
