@@ -8,9 +8,14 @@
 //Remember, we told the computer that our function would be called "clicked" so we have to name it that here. JavaScript is case-sensitive, so "CLICKED" will not work, and neither will "Clicked" or "cLICKED".
 function clicked(e){
 //Now that our function is declared, we need to DEFINE it. The definition of the function is what commands will be run by the computer when the function is INVOKED.
+  
+//First, it's worth noting the "e" inside of the parentheses after our function name. That "e" is the "event" that we passed in from the HTML. We have to have that event to refer to so we can do this:
     e.preventDefault();
-//
-    let input = document.getElementById("new-item").value;
+//We must preventDefault to keep the page from refreshing when we click our button. Normally, this is considered a "submit" event and would cause the page to refresh.
+    
+//Next, let's get the text out of the text input that our user can type into:
+let input = document.getElementById("new-item").value;
+//So, we're getting the element by the ID attached to it, then selecting only the "value" property.
 //
     let list = document.getElementById("note-list");
 //
