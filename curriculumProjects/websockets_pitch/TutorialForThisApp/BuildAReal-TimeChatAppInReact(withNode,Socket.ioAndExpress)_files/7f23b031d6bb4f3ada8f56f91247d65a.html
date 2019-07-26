@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/7f23b031d6bb4f3ada8f56f91247d65a -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>socket.jsx – Medium</title><meta name="description" content="GitHub Gist: instantly share code, notes, and snippets."><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./92d9894df745e54b1f051b6fef36b9e0.js.download" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-4e8330898d16b1b65e7f0856076a5a28.css"><div id="gist92501777" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-socket-jsx" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-jsx ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-socket-jsx-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-socket-jsx-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> src/socket.js</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-socket-jsx-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> <span class="pl-smi">io</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>socket.io-client<span class="pl-pds">'</span></span>;</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-socket-jsx-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-socket-jsx-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-smi">socket</span> <span class="pl-k">=</span> <span class="pl-en">io</span>(<span class="pl-s"><span class="pl-pds">'</span>http://localhost:8000<span class="pl-pds">'</span></span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-socket-jsx-LC5" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-socket-jsx-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-en">configureSocket</span> <span class="pl-k">=</span> <span class="pl-smi">dispatch</span> <span class="pl-k">=&gt;</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-socket-jsx-LC7" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> make sure our socket is connected to the port</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-socket-jsx-LC8" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>connect<span class="pl-pds">'</span></span>, () <span class="pl-k">=&gt;</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-socket-jsx-LC9" class="blob-code blob-code-inner js-file-line">    <span class="pl-c1">console</span><span class="pl-k">.</span><span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>connected<span class="pl-pds">'</span></span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-socket-jsx-LC10" class="blob-code blob-code-inner js-file-line">  });</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-socket-jsx-LC11" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-socket-jsx-LC12" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> the socket.on method is like an event listener</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-socket-jsx-LC13" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> just like how our redux reducer works</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-socket-jsx-LC14" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> the different actions that our socket/client will emit</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-socket-jsx-LC15" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">//</span> is catched by these listeners</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-socket-jsx-LC16" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>UPDATED_POT<span class="pl-pds">'</span></span>, <span class="pl-smi">state</span> <span class="pl-k">=&gt;</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-socket-jsx-LC17" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">dispatch</span>({ <span class="pl-c1"><span class="pl-s">type</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>DELIVER_UPDATED_POT_TO_REDUCER<span class="pl-pds">'</span></span>, <span class="pl-c1"><span class="pl-s">updatedPot</span>:</span> <span class="pl-smi">state</span> });</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-socket-jsx-LC18" class="blob-code blob-code-inner js-file-line">  });</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-socket-jsx-LC19" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>GUESS_WHO_PITCHED_IN<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span> <span class="pl-k">=&gt;</span> {</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-socket-jsx-LC20" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">dispatch</span>({ <span class="pl-c1"><span class="pl-s">type</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>PICTHED_IN<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span> });</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-socket-jsx-LC21" class="blob-code blob-code-inner js-file-line">  });</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-socket-jsx-LC22" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>CURRENT_POT<span class="pl-pds">'</span></span>, <span class="pl-smi">pot</span> <span class="pl-k">=&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-socket-jsx-LC23" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">dispatch</span>({ <span class="pl-c1"><span class="pl-s">type</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>CURRENT_POT_TO_REDUCER<span class="pl-pds">'</span></span>, <span class="pl-c1"><span class="pl-s">pot</span>:</span> <span class="pl-smi">pot</span> })</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-socket-jsx-LC24" class="blob-code blob-code-inner js-file-line">  );</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-socket-jsx-LC25" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>SEND_NAMES_TO_CLIENTS<span class="pl-pds">'</span></span>, <span class="pl-smi">names</span> <span class="pl-k">=&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-socket-jsx-LC26" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">dispatch</span>({ <span class="pl-c1"><span class="pl-s">type</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>PUT_ALL_NAMES_TO_REDUCER<span class="pl-pds">'</span></span>, <span class="pl-smi">names</span> })</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-socket-jsx-LC27" class="blob-code blob-code-inner js-file-line">  );</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-socket-jsx-LC28" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">on</span>(<span class="pl-s"><span class="pl-pds">'</span>GUESS_WHO_GOT_ONE<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span> <span class="pl-k">=&gt;</span> <span class="pl-en">dispatch</span>({ <span class="pl-c1"><span class="pl-s">type</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>GOT_ONE<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span> }));</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-socket-jsx-LC29" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">return</span> <span class="pl-smi">socket</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-socket-jsx-LC30" class="blob-code blob-code-inner js-file-line">};</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-socket-jsx-LC31" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-socket-jsx-LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> the following are fucntions that our client side uses</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-socket-jsx-LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> to emit actions to everyone connected to our web socket</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-socket-jsx-LC34" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-en">getCurrentPot</span> <span class="pl-k">=</span> () <span class="pl-k">=&gt;</span> <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">emit</span>(<span class="pl-s"><span class="pl-pds">'</span>GET_CURRENT_POT<span class="pl-pds">'</span></span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-socket-jsx-LC35" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-socket-jsx-LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-en">sendNameToServer</span> <span class="pl-k">=</span> <span class="pl-smi">name</span> <span class="pl-k">=&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-socket-jsx-LC37" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">emit</span>(<span class="pl-s"><span class="pl-pds">'</span>SEND_NAME_TO_SERVER<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-socket-jsx-LC38" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-socket-jsx-LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-en">sendPitchInToServer</span> <span class="pl-k">=</span> <span class="pl-smi">name</span> <span class="pl-k">=&gt;</span></td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-socket-jsx-LC40" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">emit</span>(<span class="pl-s"><span class="pl-pds">'</span>SOMEONE_PITCHED_IN<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-socket-jsx-LC41" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-socket-jsx-LC42" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">const</span> <span class="pl-en">sendGetOneToServer</span> <span class="pl-k">=</span> <span class="pl-smi">name</span> <span class="pl-k">=&gt;</span> <span class="pl-smi"><span class="pl-smi">socket</span></span><span class="pl-k">.</span><span class="pl-en">emit</span>(<span class="pl-s"><span class="pl-pds">'</span>SOMEONE_GOT_ONE<span class="pl-pds">'</span></span>, <span class="pl-smi">name</span>);</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-socket-jsx-LC43" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-socket-jsx-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-socket-jsx-LC44" class="blob-code blob-code-inner js-file-line"><span class="pl-k">export</span> <span class="pl-k">default</span> <span class="pl-smi">configureSocket</span>;</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/jelorivera08/92d9894df745e54b1f051b6fef36b9e0/raw/01b51b865cd763c84a81e8ea9de7f4fd1295c5dc/socket.jsx" style="float:right">view raw</a>
+        <a href="https://gist.github.com/jelorivera08/92d9894df745e54b1f051b6fef36b9e0#file-socket-jsx">socket.jsx</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200;function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height); resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);}maybeResize();</script></body></html>
