@@ -2,7 +2,7 @@
 
 ## About This App
 ## All Credit Goes To The Original Author: Paige Niedringhaus
-###Find her tutorial and follow her @: https://itnext.io/@paigen11
+### Find her tutorial and follow her @: https://itnext.io/@paigen11
 This application is a full-stack MERN app (MySQL, Express, React and Node.js). It is a user registration application that allows a user to register in the database, log in, view their profile, update it and delete it.
 
 It uses a `docker-compose` file to spin up a local MySQL database, the API module and the client module all with one command: `docker-compose up`.
