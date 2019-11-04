@@ -1,0 +1,75 @@
+#guessArea {
+    border: black 4px solid;
+    width: 100vw;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+#guessArea>div {
+    border-bottom: 2px black solid;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+
+}
+
+.letters {
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+
+.letters {
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+
+#letterBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0px 30vw 0px 30vw
+}
+
+.letterBtn {
+    font-size: 20px;
+    color: crimson;
+    background-color: black
+}
+
+#playArea {
+    height: 400px;
+    background-image: url(assets/bunkbed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#playArea>img {
+    margin-top: 50px;
+    width: 500px;
+    padding-left: 80px
+}
+
+header {
+    display: block;
+    margin-top: 20px;
+    width: 100vw;
+    text-align: center
+}
+
+#strikeBox {
+    min-height: 25px
+}
+
+#start {
+    margin: 0 auto 0 auto;
+    font-size: 20px;
+    color: crimson;
+    background-color: black
+}
